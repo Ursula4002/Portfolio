@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="nord">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CDN AVANT DaisyUI (Important)-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI APRÈS Tailwind (Important)-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font awesome pour mes icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" />
+    <!-- Police inter ( Vérifier si c'est important de l'importer)-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: ['selector', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Portfolio-Ursula Ngalubenge</title>
+</head>
+
+<body>
+    <header class="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-base-content/10">
+
+        <nav class="flex flex-wrap items-center justify-between p-4 max-w-7xl mx-auto px-6 md:px-12">
+
+            <!-- Logo (Toujours en haut à gauche) -->
+            <div
+                class="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent order-1">
+                UN
+            </div>
+
+            <ul class="w-full flex justify-center items-center md:w-auto flex gap-6 text-sm font-medium mt-4 md:mt-0 order-3 md:order-2 border-t border-base-content/5 pt-3 md:pt-0 md:border-none"
+                id="nav-links">
+                <li><a href="#apropos" class="text-base-content hover:text-emerald-600 transition-colors" data-translate="nav-about">A propos</a>
+                </li>
+                <li><a href="#projets" class="text-base-content hover:text-emerald-600 transition-colors" data-translate="nav-projects">Projets</a>
+                </li>
+                <li><a href="#contact" class="text-base-content hover:text-emerald-600 transition-colors" data-translate="nav-contact">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Thème + Langue (Toujours en haut à droite) -->
+            <div class="flex items-center gap-2 order-2">
+                <!-- Dark toggle -->
+                <label class="swap swap-rotate">
+                    <input type="checkbox" value="dark" class="theme-controller" aria-label="Toggle Theme" />
+                    <svg class="swap-off h-8 w-8 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="swap-on h-8 w-8 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </label>
+                <!-- Langue FR/EN -->
+                <label class="swap swap-rotate ml-2">
+                    <input type="checkbox" class="lang-controller" />
+                    <span
+                        class="swap-off text-lg font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">FR</span>
+                    <span
+                        class="swap-on text-lg font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">EN</span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header ends here -->
+
+    <main>
+
+        <!-- Hero Section -->
+
+        <section id="hero"
+            class="min-h-[90vh] bg-gradient-to-br from-base-100 to-base-200 dark:from-base-300 dark:to-base-200 relative overflow-hidden px-6 md:px-12 py-24">
+
+            <!-- SYMBOLE BACKGROUND (mobile + desktop) -->
+            <div
+                class="absolute inset-0 flex items-center justify-center pointer-events-none md:pointer-events-auto md:justify-end md:pr-12">
+                <div class="relative flex items-center justify-center group w-72 h-72 md:w-96 md:h-96">
+                    <!-- Cercle flou -->
+                    <div class="absolute w-64 h-64 bg-emerald-400 rounded-full blur-3xl opacity-20"></div>
+                </div>
+            </div>
+
+            <!-- CONTENU TEXTE (z-10 = au-dessus symbole) -->
+            <div class="relative z-10 max-w-6xl mx-auto">
+                <!-- Mobile: Centré -->
+                <div class="md:hidden text-center">
+                    <h1 class="text-4xl font-bold mb-6 leading-tight 
+                       bg-gradient-to-r from-emerald-600 to-blue-600 dark:from-emerald-400 dark:to-blue-400
+                       bg-clip-text text-transparent drop-shadow-lg">
+                        Ursula Ngalubenge Nandoy
+                    </h1>
+                    <p class="text-xl font-medium mb-8 max-w-lg mx-auto leading-relaxed 
+                     text-base-content/90 drop-shadow-md" data-translate="hero-desc-mobile">
+                        Développeuse web Fullstack.<br>J'incarne des idées en interfaces fluides et modernes.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                        <a href="https://github.com/Ursula4002?tab=repositories" class="px-8 py-4 bg-emerald-500 text-white font-semibold 
+                     rounded-xl hover:bg-emerald-600 transition-all duration-300 shadow-lg 
+                     w-full text-center" target="_blank" rel="noopener noreferrer"  data-translate="hero-btn-projects"  >
+                            Voir mes projets
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desktop: Split gauche/droite -->
+                <div class="hidden md:grid md:grid-cols-2 gap-16 items-center h-full">
+                    <!-- Texte gauche -->
+                    <div>
+                        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight 
+                           bg-gradient-to-r from-emerald-600 via-emerald-500 to-blue-600 
+                           dark:from-emerald-400 dark:via-emerald-300 dark:to-blue-400
+                           bg-clip-text text-transparent drop-shadow-2xl">
+                            Ursula Ngalubenge Nandoy
+                        </h1>
+                        <p class="text-2xl font-medium mb-8 max-w-lg leading-relaxed 
+                         text-base-content/90 drop-shadow-lg" data-translate="hero-desc-desktop">
+                            Développeuse web frontend.<br>J'incarne des idées en interfaces fluides et modernes.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://github.com/Ursula4002?tab=repositories" class="px-8 py-4 bg-emerald-500 text-white font-semibold 
+                       rounded-xl hover:bg-emerald-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                                target="_blank" rel="noopener noreferrer" data-translate="hero-btn-projects">
+                                Voir mes projets
+                            </a>
+                            <a href="#contact" class="px-8 py-4 border-2 border-slate-300 dark:border-slate-600 
+                       text-base-content font-semibold rounded-xl 
+                       hover:bg-base-200 dark:hover:bg-base-300 transition-all duration-300" data-translate="hero-btn-contact">
+                                Me contacter
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Symbole droit -->
+                    <div class="md:order-2 flex justify-center md:justify-end">
+                        <div class="relative w-80 h-80 md:w-96 md:h-96">
+                            <!-- Cercle flou -->
+                            <div
+                                class="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-400/20 to-blue-400/20 backdrop-blur-xl rounded-3xl shadow-2xl opacity-70">
+                            </div>
+                            <!-- Symbole animé -->
+                            <div class="relative w-full h-full flex items-center justify-center group">
+
+                                <!-- symbole -->
+                                <span
+                                    class="text-5xl font-mono text-green-500 transition duration-500 group-hover:opacity-0"
+                                    aria-hidden="true">
+                                    &lt;/&gt;
+                                </span>
+
+                                <!-- symbole hover -->
+                                <span
+                                    class="absolute text-4xl font-mono text-green-500 opacity-0 transition duration-500 group-hover:opacity-100"
+                                    aria-hidden="true">
+                                    &lt;Ursula/&gt;
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+
+        <section id="apropos" class="py-16 md:py-24 px-6 md:px-12 max-w-6xl mx-auto">
+            <!-- TITRE SECTION -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-20 text-base-content"
+                data-translate="about-title" data-translate="about-tech-stack">
+                About Me
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+
+                <!-- GAUCHE : TEXTE DE PRÉSENTATION (Priorité Mobile : order-1) -->
+                <div class="order-1 md:order-1 space-y-6">
+                    <h3 class="text-2xl md:text-3xl font-bold text-base-content text-center md:text-left"
+                        data-translate="about-heading">
+                        Développeuse Fullstack passionnée par l'expérience utilisateur.
+                    </h3>
+
+                    <div class="space-y-4 text-base-content/80 leading-relaxed text-justify md:text-left">
+                        <p data-translate="about-first-desc">
+                            Je conçois des sites et des applications comme des outils au service d’un besoin concret.
+                            Chaque projet est pensé pour répondre à une problématique précise ou améliorer un processus
+                            existant.
+                        </p>
+                        <p data-translate="about-second-desc">
+                            L’expérience utilisateur guide chacune de mes décisions. L’objectif n’est pas uniquement de
+                            créer des interfaces esthétiques, mais de rendre la technologie simple, fluide et
+                            accessible. et de concevoir des interfaces
+                            intuitives, capables de s’adapter naturellement aux usages.
+                        </p>
+                    </div>
+
+                    <!-- SECTION LANGUES-->
+                    <div class="pt-6">
+                        <h4 class="text-xl font-semibold mb-4 text-base-content text-center md:text-left italic"
+                            data-translate="lang">Langues
+                        </h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex flex-col p-3 bg-base-200 rounded-lg border border-base-content/5">
+                                <span class="font-bold text-emerald-600" data-translate="lang-fr">Français</span>
+                                <span class="text-xs opacity-70" data-translate="lang-fr-desc">Natif</span>
+                            </div>
+                            <div class="flex flex-col p-3 bg-base-200 rounded-lg border border-base-content/5">
+                                <span class="font-bold text-emerald-600" data-translate="lang-en">Anglais</span>
+                                <span class="text-xs opacity-70" data-translate="lang-en-desc">C1 (Technique)</span>
+                            </div>
+                            <div class="flex flex-col p-3 bg-base-200 rounded-lg border border-base-content/5">
+                                <span class="font-bold text-emerald-600" data-translate="lang-es">Espagnol</span>
+                                <span class="text-xs opacity-70" data-translate="lang-es-desc">B1 (Conversation)</span>
+                            </div>
+                            <div class="flex flex-col p-3 bg-base-200 rounded-lg border border-base-content/5">
+                                <span class="font-bold text-emerald-600" data-translate="lang-pt">Portugais</span>
+                                <span class="text-xs opacity-70">A1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DROITE : TECH STACK (Priorité Mobile : order-2) -->
+                <div class="order-2 md:order-2 bg-base-200/50 p-8 rounded-3xl border border-base-content/5">
+                    <h4 class="text-xl font-semibold mb-8 text-center text-base-content uppercase tracking-widest">Tech
+                        Stack</h4>
+
+                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-y-8 gap-x-4">
+
+                        <!-- Html -->
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div
+                                class="p-3 bg-base-100 rounded-xl shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
+                                <svg class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
+                                </svg>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">HTML</span>
+                        </div>
+
+                        <!-- Css -->
+
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div
+                                class="p-3 bg-base-100 rounded-xl shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
+                                <svg class="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63" />
+                                </svg>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">CSS</span>
+                        </div>
+
+                        <!-- Tailwind -->
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div
+                                class="p-3 bg-base-100 rounded-xl shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
+                                <svg class="w-8 h-8 text-cyan-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">Tailwind</span>
+                        </div>
+
+                        <!-- daisyui -->
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div
+                                class="p-3 bg-base-100 rounded-xl shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
+                                <svg class="w-8 h-8 text-yellow-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-1.56 0-3.137.721-4.095 2.122a5 5 0 0 0-.857-.081c-1.353-.006-2.62.565-3.53 1.476C2.415 4.62 1.81 6.241 2.121 7.905.722 8.863 0 10.44 0 12s.721 3.137 2.122 4.095c-.31 1.664.294 3.286 1.395 4.388 1.102 1.101 2.724 1.706 4.388 1.395C8.863 23.278 10.44 24 12 24s3.137-.721 4.095-2.122c1.664.31 3.286-.294 4.388-1.395 1.101-1.102 1.706-2.724 1.395-4.388C23.278 15.137 24 13.56 24 12s-.721-3.137-2.122-4.095c.31-1.664-.294-3.286-1.395-4.388-1.102-1.101-2.724-1.706-4.388-1.395C15.137.722 13.56 0 12 0m0 .962c1.18 0 2.345.471 3.123 1.447a5 5 0 0 0-.64.315 4.97 4.97 0 0 1-4.965 0 5 5 0 0 0-.64-.315C9.654 1.433 10.82.962 12 .962M7.026 2.99q.196 0 .397.023a5 5 0 0 0-.229.67 4.97 4.97 0 0 1-3.511 3.511 5 5 0 0 0-.67.229c-.138-1.238.352-2.393 1.185-3.225.743-.743 1.742-1.214 2.828-1.208m10.011 0c1.062.013 2.037.479 2.765 1.208.833.832 1.323 1.987 1.185 3.225a5 5 0 0 0-.67-.229 4.97 4.97 0 0 1-3.511-3.511 5 5 0 0 0-.229-.67 4 4 0 0 1 .46-.023m-8.667.252q.333.124.668.315a5.94 5.94 0 0 0 5.924 0q.335-.191.668-.315a4.5 4.5 0 0 1 .247.69 5.94 5.94 0 0 0 4.19 4.191q.37.101.691.247a4.5 4.5 0 0 1-.315.668 5.94 5.94 0 0 0 0 5.924q.191.335.315.668a4.5 4.5 0 0 1-.69.247 5.94 5.94 0 0 0-4.191 4.19q-.101.37-.247.691a4.5 4.5 0 0 1-.668-.315 5.94 5.94 0 0 0-5.924 0 4.5 4.5 0 0 1-.668.315 4.5 4.5 0 0 1-.247-.69 5.94 5.94 0 0 0-4.19-4.191 4.5 4.5 0 0 1-.691-.247q.124-.333.315-.668a5.94 5.94 0 0 0 0-5.924 4.5 4.5 0 0 1-.315-.668q.322-.146.69-.247a5.94 5.94 0 0 0 4.191-4.19q.101-.37.247-.691M2.41 8.877q.13.323.314.64a4.97 4.97 0 0 1 0 4.965 5 5 0 0 0-.315.64C1.433 14.346.962 13.18.962 12s.471-2.345 1.447-3.123m19.18 0c.977.778 1.448 1.943 1.448 3.123s-.471 2.345-1.447 3.123a5 5 0 0 0-.315-.64 4.97 4.97 0 0 1 0-4.965q.183-.319.315-.64m-14.907 1.57a.417.417 0 0 0-.296.714l.117.117c-.13.228-.203.492-.203.774 0 .87.7 1.569 1.569 1.569s1.568-.7 1.568-1.569-.7-1.568-1.568-1.568c-.282 0-.546.073-.775.203l-.116-.117a.42.42 0 0 0-.296-.123m10.748 0a.42.42 0 0 0-.295.123l-.12.12a1.57 1.57 0 0 0-.781-.206c-.869 0-1.569.7-1.569 1.568 0 .87.7 1.569 1.569 1.569s1.569-.7 1.569-1.569c0-.279-.073-.54-.2-.767l.123-.123a.417.417 0 0 0-.296-.715m-9.904.237a.627.627 0 0 1 .627.627.627.627 0 0 1-.627.627.627.627 0 0 1-.628-.627.627.627 0 0 1 .628-.627m8.365 0a.627.627 0 0 1 .628.627.627.627 0 0 1-.628.627.627.627 0 0 1-.627-.627.627.627 0 0 1 .627-.627m-7.187 1.17a.314.314 0 0 1 .313.314.314.314 0 0 1-.313.314.314.314 0 0 1-.314-.314.314.314 0 0 1 .314-.314m8.365 0a.314.314 0 0 1 .314.314.314.314 0 0 1-.314.314.314.314 0 0 1-.314-.314.314.314 0 0 1 .314-.314m-8.757.758a.21.21 0 0 1 .21.209.21.21 0 0 1-.21.209.21.21 0 0 1-.21-.21.21.21 0 0 1 .21-.208m8.366 0a.21.21 0 0 1 .209.209.21.21 0 0 1-.21.209.21.21 0 0 1-.209-.21.21.21 0 0 1 .21-.208m-5.551.48a.32.32 0 0 0-.232.082.32.32 0 0 0-.023.453c.296.328.737.524 1.18.524.441 0 .882-.196 1.178-.524a.32.32 0 0 0-.023-.453.32.32 0 0 0-.453.023c-.145.16-.486.312-.703.312s-.558-.152-.703-.312a.32.32 0 0 0-.221-.106m-8.115 3.485q.319.134.67.229a4.97 4.97 0 0 1 3.511 3.511q.095.351.229.67c-1.238.138-2.393-.352-3.225-1.185-.833-.832-1.323-1.987-1.185-3.225m17.974 0c.138 1.238-.352 2.393-1.185 3.225-.832.833-1.987 1.323-3.225 1.185a5 5 0 0 0 .229-.67 4.97 4.97 0 0 1 3.511-3.511 5 5 0 0 0 .67-.229M12 20.612c.857 0 1.714.222 2.482.664q.318.183.64.315c-.777.976-1.942 1.447-3.122 1.447s-2.345-.471-3.123-1.447q.323-.132.64-.315A5 5 0 0 1 12 20.612" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">Daisyui</span>
+                        </div>
+
+
+                        <!-- JS -->
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div
+                                class="p-3 bg-base-100 rounded-xl shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
+                                <svg class="w-8 h-8 text-yellow-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">Javascript</span>
+                        </div>
+
+                        <!-- React -->
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div
+                                class="p-3 bg-base-100 rounded-xl shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
+                                <svg class="w-8 h-8 text-sky-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">React</span>
+                        </div>
+
+                        <!-- Figma -->
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div
+                                class="p-3 bg-base-100 rounded-xl shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
+                                <svg class="w-8 h-8 text-pink-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">Figma</span>
+                        </div>
+
+                        <!-- Yup -->
+                        <div class="flex flex-col items-center gap-2 group">
+                            <div
+                                class="w-14 h-14 bg-base-100 rounded-xl shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300 flex items-center justify-center">
+                                <span class="font-bold text-green-500">yup</span>
+                            </div>
+                            <span
+                                class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">Validation</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+
+        <section id="projets" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+            <!-- En-tête avec animation subtile -->
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-20 text-base-content"
+                    data-translate="projects-title">
+                    Mes projets
+                </h2>
+                <div class="h-1.5 w-24 bg-primary mx-auto rounded-full mt-2"></div>
+            </div>
+            <!-- Grille : Passage à 3 colonnes sur très grands écrans si besoin -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mb-16">
+
+                <!-- Projet 1: Coffee Shop -->
+                <div
+                    class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden border border-base-400">
+                    <!-- Badge Statut Dynamique -->
+                    <div class="absolute top-4 right-4 z-20">
+                        <span class="badge badge-success gap-2 font-medium py-3 px-4 shadow-sm bg-green-500"
+                            data-translate="status-done">
+                            Terminé
+                        </span>
+                    </div>
+
+                    <figure class="relative h-64 overflow-hidden">
+                        <img src="images/projets/coffee-img.webp" alt="Coffee Shop Project"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    </figure>
+
+                    <div class="card-body p-8">
+                        <h3 class="card-title text-2xl font-bold">Coffee Shop</h3>
+                        <!-- Ajout des Tech Tags -->
+                        <div class="flex flex-wrap gap-2 my-3">
+                            <span class="badge badge-ghost badge-sm">HTML</span>
+                            <span class="badge badge-ghost badge-sm">CSS</span>
+                            <span class="badge badge-ghost badge-sm">JavaScript</span>
+                        </div>
+                        <p class="text-base-content/70 mb-6" data-translate="coffee-desc">
+                            Plateforme e-commerce élégante pour une boutique de café spécialisée, avec gestion du
+                            panier.
+                        </p>
+                        <div class="card-actions justify-start gap-4">
+                            <a href="https://ursula4002.github.io/Coffe-shop/#contacts"
+                                class="btn btn-primary btn-sm md:btn-md px-6 shadow-lg shadow-primary/20">Live
+                            </a>
+                            <a href="https://github.com/Ursula4002/Coffe-shop"
+                                class="btn btn-outline btn-sm md:btn-md hover:bg-base-content" target="_blank"
+                                rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2: Wattpad (Version Expérimentale) -->
+                <div
+                    class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden border border-base-200">
+                    <div class="absolute top-4 right-4 z-20">
+                        <!-- Changé en badge-info pour différencier le statut -->
+                        <span class="badge badge-info gap-2 font-medium py-3 px-4 shadow-sm"
+                            data-translate="status-experimental">
+                            Experimental
+                        </span>
+                    </div>
+                    <figure class="relative h-64 overflow-hidden">
+                        <img src="images/projets/wattpad-img.webp" alt="Wattpad Clone"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    </figure>
+                    <div class="card-body p-8">
+                        <h3 class="card-title text-2xl font-bold">Wattpad Clone</h3>
+                        <div class="flex flex-wrap gap-2 my-3">
+                            <span class="badge badge-ghost badge-sm">HTML</span>
+                            <span class="badge badge-ghost badge-sm">CSS</span>
+                        </div>
+                        <p class="text-base-content/70 mb-6" data-translate="wattpad-desc">Réplication pixel-perfect de
+                            la landing page Wattpad pour perfectionner l'intégration responsive.</p>
+                        <div class="card-actions justify-start gap-4">
+                            <a href="#" class="btn btn-primary btn-sm md:btn-md px-6">Live</a>
+                            <a href="#" class="btn btn-outline btn-sm md:btn-md">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3: The Hangman -->
+                <div
+                    class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden border border-base-200">
+                    <div class="absolute top-4 right-4 z-20">
+                        <span class="badge badge-success gap-2 font-medium py-3 px-4"
+                            data-translate="status-done">Terminé</span>
+                    </div>
+                    <figure class="relative h-64 overflow-hidden">
+                        <img src="images/projets/hangman-img.webp" alt="Jeu du pendu"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    </figure>
+                    <div class="card-body p-8">
+                        <h3 class="card-title text-2xl font-bold">The Hangman</h3>
+                        <div class="flex flex-wrap gap-2 my-3">
+                            <span class="badge badge-ghost badge-sm">HTML</span>
+                            <span class="badge badge-ghost badge-sm">CSS</span>
+                            <span class="badge badge-ghost badge-sm">JS</span>
+                        </div>
+                        <p class="text-base-content/70 mb-6" data-translate="hangman-desc">Jeu interactif avec gestion
+                            des scores et dictionnaire de mots dynamique.</p>
+                        <div class="card-actions justify-start gap-4">
+                            <a href="https://ursula4002.github.io/The-Hangman/"
+                                class="btn btn-primary btn-sm md:btn-md px-6" target="_blank"
+                                rel="noopener noreferrer">Live</a>
+                            <a href="https://github.com/Ursula4002/The-Hangman" class="btn btn-outline btn-sm md:btn-md"
+                                target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4: Kintacos (En cours) -->
+                <div
+                    class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden border border-base-200">
+                    <div class="absolute top-4 right-4 z-20">
+                        <!-- Changé en badge-warning car c'est en cours -->
+                        <span class="badge badge-warning gap-2 font-medium py-3 px-4 shadow-sm text-warning-content"
+                            data-translate="status-ongoing">
+                            En cours
+                        </span>
+                    </div>
+                    <figure class="relative h-64 overflow-hidden">
+                        <img src="images/projets/kintacos-img.jpg" alt="Kintacos Project"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    </figure>
+                    <div class="card-body p-8">
+                        <h3 class="card-title text-2xl font-bold">Kintacos</h3>
+                        <div class="flex flex-wrap gap-2 my-3">
+                            <span class="badge badge-ghost badge-sm">HTML</span>
+                            <span class="badge badge-ghost badge-sm">CSS</span>
+                            <span class="badge badge-ghost badge-sm">JS</span>
+                        </div>
+                        <p class="text-base-content/70 mb-6" data-translate="kintacos-desc">Application de commande en
+                            ligne pour un fast-food local.</p>
+                        <div class="card-actions justify-start gap-4">
+                            <a href="#" class="btn btn-primary btn-sm md:btn-md px-6">Live</a>
+                            <a href="#" class="btn btn-outline btn-sm md:btn-md">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Final amélioré -->
+
+            <div class="text-center mt-12">
+                <a href="https://github.com/Ursula4002" target="_blank" rel="noopener noreferrer"
+                    class="group inline-flex items-center gap-3 btn btn-lg btn-ghost hover:border-blue-700 border-2 border-green-500 rounded-2xl px-10 transition-all duration-300 hover:gap-5"
+                    data-translate="see-more">
+                    Voir plus...
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Main ends here -->
+
+    <footer id="contact" class="bg-base-300 text-base-content backdrop-blur-md py-12 px-6 md:px-12">
+        <!-- Section Principale : Contact & Réseaux -->
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+
+            <!-- Téléphone -->
+            <div class="flex flex-col items-center text-center">
+                <div class="mb-3 p-3 bg-emerald-500/10 rounded-full text-emerald-500">
+                    <i class="fa-solid fa-phone text-xl"></i>
+                </div>
+                <p class="text-lg font-semibold text-base-content mb-1" data-translate="phone">Téléphone</p>
+                <a href="tel:+243988725975" class="hover:text-emerald-400 transition-colors">+243 98 872 5975</a>
+            </div>
+
+            <!-- Email -->
+            <div class="flex flex-col items-center text-center">
+                <div class="mb-3 p-3 bg-emerald-500/10 rounded-full text-emerald-500">
+                    <i class="fa-solid fa-envelope text-xl"></i>
+                </div>
+                <p class="text-lg font-semibold text-base-content mb-1" data-translate="email">Email</p>
+                <a href="mailto:ursulangalubenge2021@gmail.com"
+                    class="hover:text-emerald-400 transition-colors break-all">
+                    ursulangalubenge2021@gmail.com
+                </a>
+            </div>
+
+            <!-- Réseaux Sociaux -->
+            <div class="flex flex-col items-center text-center">
+                <div class="mb-3 p-3 bg-emerald-500/10 rounded-full text-emerald-500">
+                    <i class="fa-solid fa-share-nodes text-xl"></i>
+                </div>
+                <p class="text-lg font-semibold mb-3 text-base-content" data-translate="follow-me">Suivez-moi</p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 bg-base-content/10 hover:bg-emerald-500 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 bg-base-content/10 hover:bg-emerald-500 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ligne de séparation et Copyright -->
+        <div class="max-w-7xl mx-auto pt-8 border-t border-base-content/10">
+            <div class="flex flex-col md:flex-row justify-evenly items-center gap-4">
+                <p class="text-base-content/70 text-sm text-center md:text-left" data-translate="copyright-rights">
+                    Copyright © 2026 <span class="font-medium">Ursula Ngalubenge Nandoy</span> - Tous droits réservés.
+                </p>
+                <div class="text-xs uppercase tracking-widest text-base-content/40 font-bold">
+                    Portfolio 2026
+                </div>
+            </div>
+        </div>
+
+        <button id="back-to-top"
+            class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-emerald-500 text-white shadow-lg transition-all duration-300 translate-y-20 opacity-0 hover:bg-emerald-600 hover:scale-110"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

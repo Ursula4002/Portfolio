@@ -1,0 +1,142 @@
+
+// Thème
+
+const themeToggle = document.querySelector('.theme-controller');
+themeToggle?.addEventListener('change', () => {
+    document.documentElement.classList.toggle('dark');
+});
+
+// Button scroll top
+
+const backToTopButton = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.remove('translate-y-20', 'opacity-0');
+        backToTopButton.classList.add('translate-y-0', 'opacity-100');
+    } else {
+        backToTopButton.classList.add('translate-y-20', 'opacity-0');
+        backToTopButton.classList.remove('translate-y-0', 'opacity-100');
+    }
+});
+
+// Translation
+
+const translations = {
+    fr: {
+        // Navigation
+        'nav-about': 'A propos',
+        'nav-projects': 'Projets',
+        'nav-contact': 'Contact',
+
+        // Hero
+        'hero-desc-mobile': 'Développeuse web Fullstack.<br>J\'incarne des idées en interfaces fluides et modernes.',
+        'hero-desc-desktop': 'Développeuse web frontend.<br>J\'incarne des idées en interfaces fluides et modernes.',
+        'hero-btn-projects': 'Voir mes projets',
+        'hero-btn-contact': 'Me contacter',
+
+        // About
+        'about-title': 'À propos de moi',
+        'about-heading': 'Développeuse Fullstack passionnée par l\'expérience utilisateur.',
+        'about-first-desc': 'Je conçois des sites et des applications comme des outils au service d\’un besoin concret. Chaque projet est pensé pour répondre à une problématique précise ou améliorer un processus existant.',
+        'about-second-desc': 'L\’expérience utilisateur guide chacune de mes décisions. L\’objectif n\’est pas uniquement de créer des interfaces esthétiques, mais de rendre la technologie simple, fluide et accessible.',
+        'about-tech-stack': 'Compétences techniques',
+        'lang': 'Langues',
+        'lang-fr': 'Français',
+        'lang-fr-desc': 'Natif',
+        'lang-en': 'Anglais',
+        'lang-en-desc': 'C1 (Technique)',
+        'lang-es': 'Espagnol',
+        'lang-es-desc': 'B1 (Conversation)',
+        'lang-pt': 'Portugais',
+
+        // Projets
+        'projects-title': 'Mes projets',
+        'status-done': 'Terminé',
+        'status-experimental': 'Expérimental',
+        'status-ongoing': 'En cours',
+        'coffee-desc': 'Plateforme e-commerce élégante pour une boutique de café spécialisée, avec gestion du panier.',
+        'wattpad-desc': 'Réplication pixel-perfect de la landing page Wattpad pour perfectionner l\'intégration responsive.',
+        'hangman-desc': 'Jeu interactif avec gestion des scores et dictionnaire de mots dynamique.',
+        'kintacos-desc': 'Application de commande en ligne pour un fast-food local.',
+        'see-more': 'Voir plus...',
+
+        // Contact & Footer
+        'phone': 'Téléphone',
+        'email': 'Email',
+        'follow-me': 'Suivez-moi',
+        'copyright-rights': 'Copyright © 2026 <span class="font-medium">Ursula Ngalubenge Nandoy</span> - Tous droits réservés.'
+    },
+    en: {
+        // Navigation
+        'nav-about': 'About',
+        'nav-projects': 'Projects',
+        'nav-contact': 'Contact',
+
+        // Hero
+        'hero-desc-mobile': 'Fullstack web developer.<br>I turn ideas into smooth, modern interfaces.',
+        'hero-desc-desktop': 'Frontend web developer.<br>I turn ideas into smooth, modern interfaces.',
+        'hero-btn-projects': 'See my projects',
+        'hero-btn-contact': 'Contact me',
+
+        // About
+        'about-title': 'About Me',
+        'about-heading': 'Fullstack Developer passionate about user experience.',
+        'about-first-desc': 'I design websites and applications as tools serving a concrete need. Each project is thought to solve a specific problem or improve an existing process.',
+        'about-second-desc': 'User experience guides my every decision. The goal is not just to create aesthetic interfaces, but to make technology simple, fluid, and accessible.',
+        'about-tech-stack': 'Tech Stack',
+        'lang': 'Languages',
+        'lang-fr': 'French',
+        'lang-fr-desc': 'Native',
+        'lang-en': 'English',
+        'lang-en-desc': 'C1 (Technical)',
+        'lang-es': 'Spanish',
+        'lang-es-desc': 'B1 (Conversational)',
+        'lang-pt': 'Portuguese',
+
+        // Projects
+        'projects-title': 'My Projects',
+        'status-done': 'Completed',
+        'status-experimental': 'Experimental',
+        'status-ongoing': 'In Progress',
+        'coffee-desc': 'Elegant e-commerce platform for a specialty coffee shop, with cart management.',
+        'wattpad-desc': 'Pixel-perfect replication of the Wattpad landing page to perfect responsive integration.',
+        'hangman-desc': 'Interactive game with score management and dynamic word dictionary.',
+        'kintacos-desc': 'Online ordering application for a local fast-food restaurant.',
+        'see-more': 'See more...',
+
+        // Contact & Footer
+        'phone': 'Phone',
+        'email': 'Email',
+        'follow-me': 'Follow Me',
+        'copyright-rights': 'Copyright © 2026 <span class="font-medium">Ursula Ngalubenge Nandoy</span> - All rights reserved.'
+    }
+};
+
+let currentLang = 'fr';
+
+// Language toggle
+const langToggle = document.querySelector('.lang-controller');
+langToggle?.addEventListener('change', () => {
+    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+    document.documentElement.lang = currentLang;
+    updateTranslations();
+});
+
+function updateTranslations() {
+    document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (translations[currentLang][key]) {
+            el.innerHTML = translations[currentLang][key];
+        }
+    });
+
+    // Update nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navTexts = currentLang === 'fr' ? ['CV', 'Projets', 'Contact'] : ['CV', 'Projects', 'Contact'];
+    navLinks.forEach((link, i) => {
+        link.textContent = navTexts[i];
+    });
+}
+
+updateTranslations();
