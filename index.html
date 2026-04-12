@@ -36,55 +36,81 @@
 
         <nav class="flex flex-wrap items-center justify-between p-4 max-w-7xl mx-auto px-6 md:px-12">
 
-            <!-- Logo (Toujours en haut à gauche) -->
-            <div
-                class="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent order-1">
+            <!-- Logo -->
+            <div class="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
                 UN
             </div>
 
-            <ul class="w-full flex justify-center items-center md:w-auto flex gap-6 text-sm font-medium mt-4 md:mt-0 order-3 md:order-2 border-t border-base-content/5 pt-3 md:pt-0 md:border-none"
-                id="nav-links">
-                <li><a href="#apropos" class="text-base-content hover:text-emerald-600 transition-colors" data-translate="nav-about">A propos</a>
-                </li>
-                <li><a href="#projets" class="text-base-content hover:text-emerald-600 transition-colors" data-translate="nav-projects">Projets</a>
-                </li>
-                <li><a href="#contact" class="text-base-content hover:text-emerald-600 transition-colors" data-translate="nav-contact">Contact</a>
-                </li>
-            </ul>
-
-            <!-- Thème + Langue (Toujours en haut à droite) -->
-            <div class="flex items-center gap-2 order-2">
-                <!-- Dark toggle -->
-                <label class="swap swap-rotate">
-                    <input type="checkbox" value="dark" class="theme-controller" aria-label="Toggle Theme" />
-                    <svg class="swap-off h-8 w-8 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <circle cx="12" cy="12" r="5" />
-                        <line x1="12" y1="1" x2="12" y2="3" />
-                        <line x1="12" y1="21" x2="12" y2="23" />
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                        <line x1="1" y1="12" x2="3" y2="12" />
-                        <line x1="21" y1="12" x2="23" y2="12" />
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                    </svg>
-                    <svg class="swap-on h-8 w-8 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                    </svg>
-                </label>
-                <!-- Langue FR/EN -->
-                <label class="swap swap-rotate ml-2">
-                    <input type="checkbox" class="lang-controller" />
-                    <span
-                        class="swap-off text-lg font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">FR</span>
-                    <span
-                        class="swap-on text-lg font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">EN</span>
-                </label>
+            <!-- Menu Desktop (Caché sur mobile) -->
+            <div class="hidden md:flex items-center gap-8">
+                <ul class="flex gap-6 text-sm font-medium">
+                    <li><a href="#apropos" class="hover:text-emerald-600 transition-colors" data-translate="nav-about">A
+                            propos</a></li>
+                    <li><a href="#projets" class="hover:text-emerald-600 transition-colors"
+                            data-translate="nav-projects">Projets</a></li>
+                    <li><a href="#contact" class="hover:text-emerald-600 transition-colors"
+                            data-translate="nav-contact">Contact</a></li>
+                </ul>
+                <!-- Toggles Desktop -->
+                <div class="flex items-center gap-3 border-l pl-6 border-base-content/10">
+                    <label class="swap swap-rotate">
+                        <input type="checkbox" value="dark" class="theme-controller" />
+                        <i class="fa-solid fa-sun swap-off text-yellow-500"></i>
+                        <i class="fa-solid fa-moon swap-on text-slate-400"></i>
+                    </label>
+                    <label class="swap swap-rotate">
+                        <input type="checkbox" class="lang-controller" />
+                        <span
+                            class="swap-off font-bold bg-gradient-to-r from-emerald-600 to-blue-600 text-emerald-600 bg-clip-text text-transparent">FR</span>
+                        <span
+                            class="swap-on font-bold bg-gradient-to-r from-emerald-600 to-blue-600 text-emerald-600 bg-clip-text text-transparent">EN</span>
+                    </label>
+                </div>
             </div>
+            <!-- Burger et croix -->
+            <button id="burger-btn" class="md:hidden btn btn-ghost btn-circle">
+                <label class="swap swap-rotate pointer-events-none">
+                    <!-- Cet input contrôle l'icône -->
+                    <input type="checkbox" id="burger-checkbox" />
+
+                    <!-- Icône Menu (Burger) -->
+                    <i class="fa-solid fa-bars swap-off text-xl"></i>
+
+                    <!-- Icône Fermer (Croix) -->
+                    <i class="fa-solid fa-xmark swap-on text-xl"></i>
+                </label>
+            </button>
         </nav>
+        <!-- Menu Mobile (Caché par défaut) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-base-100 border-t border-base-content/5 p-6 transition-all">
+            <ul class="flex flex-col gap-5 text-center font-medium mb-6">
+                <li><a href="#apropos" onclick="toggleMenu()" data-translate="nav-about">A propos</a></li>
+                <li><a href="#projets" onclick="toggleMenu()" data-translate="nav-projects">Projets</a></li>
+                <li><a href="#contact" onclick="toggleMenu()" data-translate="nav-contact">Contact</a></li>
+            </ul>
+            <!-- Toggles dans le burger -->
+            <div class="flex justify-around items-center border-t border-base-content/5 pt-6">
+                <!-- Bloc Thème -->
+                <div class="flex flex-col items-center gap-1">
+                    <label class="swap swap-rotate">
+                        <input type="checkbox" value="dark" class="theme-controller" />
+                        <i class="fa-solid fa-sun swap-off text-2xl text-yellow-500"></i>
+                        <i class="fa-solid fa-moon swap-on text-2xl text-slate-400"></i>
+                    </label>
+                    <span class="text-[10px] uppercase font-bold opacity-50" data-translate="mobile-theme">Thème</span>
+                </div>
+
+                <!-- Bloc Langue -->
+                <div class="flex flex-col items-center gap-1">
+                    <label class="swap swap-rotate">
+                        <input type="checkbox" class="lang-controller" />
+                        <span class="swap-off text-xl font-bold text-emerald-600">FR</span>
+                        <span class="swap-on text-xl font-bold text-emerald-600">EN</span>
+                    </label>
+                    <span class="text-[10px] uppercase font-bold opacity-50">Langue</span>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Header ends here -->
@@ -549,7 +575,7 @@
                         class="w-10 h-10 bg-base-content/10 hover:bg-emerald-500 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
-                    <a href="#"
+                    <a href="https://github.com/Ursula4002?tab=repositories"
                         class="w-10 h-10 bg-base-content/10 hover:bg-emerald-500 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
                         <i class="fa-brands fa-github"></i>
                     </a>
