@@ -1,9 +1,14 @@
 
 // Thème
 
-const themeToggle = document.querySelector('.theme-controller');
-themeToggle?.addEventListener('change', () => {
-    document.documentElement.classList.toggle('dark');
+const themeToggles = document.querySelectorAll('.theme-controller');
+
+themeToggles.forEach(toggle => {
+    toggle.addEventListener('change', (e) => {
+        document.documentElement.classList.toggle('dark');
+        // Synchronise les boutons desktop et mobile (Coche et décoche des deux côté)
+        themeToggles.forEach(t => t.checked = e.target.checked);
+    });
 });
 
 
