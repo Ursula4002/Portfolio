@@ -6,6 +6,24 @@ themeToggle?.addEventListener('change', () => {
     document.documentElement.classList.toggle('dark');
 });
 
+
+// --- LOGIQUE DU MENU BURGER ---
+const burgerBtn = document.getElementById('burger-btn');
+const burgerCheckbox = document.getElementById('burger-checkbox');
+const mobileMenu = document.getElementById('mobile-menu');
+
+window.toggleMenu = function () {
+    const isHidden = mobileMenu.classList.toggle('hidden');
+
+    // Si le menu est caché, on décoche la croix (devient burger)
+    // Si le menu est affiché, on coche la croix
+    if (burgerCheckbox) {
+        burgerCheckbox.checked = !isHidden;
+    }
+};
+
+burgerBtn.addEventListener('click', toggleMenu);
+
 // Button scroll top
 
 const backToTopButton = document.getElementById('back-to-top');
