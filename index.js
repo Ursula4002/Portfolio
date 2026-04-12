@@ -11,7 +11,6 @@ themeToggles.forEach(toggle => {
     });
 });
 
-
 // --- LOGIQUE DU MENU BURGER ---
 const burgerBtn = document.getElementById('burger-btn');
 const burgerCheckbox = document.getElementById('burger-checkbox');
