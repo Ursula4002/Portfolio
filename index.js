@@ -134,11 +134,19 @@ const translations = {
 let currentLang = 'fr';
 
 // Language toggle
-const langToggle = document.querySelector('.lang-controller');
-langToggle?.addEventListener('change', () => {
-    currentLang = currentLang === 'fr' ? 'en' : 'fr';
-    document.documentElement.lang = currentLang;
-    updateTranslations();
+
+const langToggles = document.querySelectorAll('.lang-controller');
+
+langToggles.forEach(toggle => {
+    toggle.addEventListener('change', (e) => {
+        currentLang = currentLang === 'fr' ? 'en' : 'fr';
+        document.documentElement.lang = currentLang;
+
+        // Synchronise tous les boutons (Desktop et Mobile)
+        langToggles.forEach(t => t.checked = e.target.checked);
+
+        updateTranslations();
+    });
 });
 
 function updateTranslations() {
