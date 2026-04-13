@@ -50,6 +50,9 @@ const translations = {
         'nav-about': 'A propos',
         'nav-projects': 'Projets',
         'nav-contact': 'Contact',
+        // Mobile
+        'mobile-theme': 'Thème',
+        'mobile-lang': 'Langue',
 
         // Hero
         'hero-desc-mobile': 'Développeuse web Fullstack.<br>J\'incarne des idées en interfaces fluides et modernes.',
@@ -94,6 +97,9 @@ const translations = {
         'nav-about': 'About',
         'nav-projects': 'Projects',
         'nav-contact': 'Contact',
+        // Mobile
+        'mobile-theme': 'Theme',
+        'mobile-lang': 'Language',
 
         // Hero
         'hero-desc-mobile': 'Fullstack web developer.<br>I turn ideas into smooth, modern interfaces.',
