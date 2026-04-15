@@ -53,11 +53,21 @@
                 </ul>
                 <!-- Toggles Desktop -->
                 <div class="flex items-center gap-3 border-l pl-6 border-base-content/10">
+                    <!-- Whatsapp Icon -->
+                    <a href="https://wa.me/243988725975" target="_blank" rel="noopener noreferrer"
+                        class="text-base-content hover:text-emerald-500 transition-colors pt-1">
+                        <i class="fa-brands fa-whatsapp text-green-500 text-lg" title="Whatsapp"></i>
+                    </a>
+
+                    <!-- Theme icons -->
+
                     <label class="swap swap-rotate">
                         <input type="checkbox" value="dark" class="theme-controller" />
                         <i class="fa-solid fa-sun swap-off text-yellow-500"></i>
                         <i class="fa-solid fa-moon swap-on text-slate-400"></i>
                     </label>
+
+                    <!-- Lang Icons -->
                     <label class="swap swap-rotate">
                         <input type="checkbox" class="lang-controller" />
                         <span
@@ -68,7 +78,13 @@
                 </div>
             </div>
             <!-- Burger et croix -->
-            <button id="burger-btn" class="md:hidden btn btn-ghost btn-circle">
+            <div class="md:hidden flex items-center">
+                <!-- WhatsApp icon -->
+                <a href="https://wa.me/243988725975" target="_blank" rel="noopener noreferrer"
+                    class="text-green-500 p-2" title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                </a>
+                            <button id="burger-btn" class="md:hidden btn btn-ghost btn-circle">
                 <label class="swap swap-rotate pointer-events-none">
                     <!-- Cet input contrôle l'icône -->
                     <input type="checkbox" id="burger-checkbox" />
@@ -80,6 +96,8 @@
                     <i class="fa-solid fa-xmark swap-on text-xl"></i>
                 </label>
             </button>
+            </div>
+
         </nav>
         <!-- Menu Mobile (Caché par défaut) -->
         <div id="mobile-menu" class="hidden md:hidden bg-base-100 border-t border-base-content/5 p-6 transition-all">
@@ -104,8 +122,10 @@
                 <div class="flex flex-col items-center gap-1">
                     <label class="swap swap-rotate">
                         <input type="checkbox" class="lang-controller" />
-                        <span class="swap-off text-xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 text-emerald-600 bg-clip-text text-transparent">FR</span>
-                        <span class="swap-on text-xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 text-emerald-600 bg-clip-text text-transparent">EN</span>
+                        <span
+                            class="swap-off text-xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 text-emerald-600 bg-clip-text text-transparent">FR</span>
+                        <span
+                            class="swap-on text-xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 text-emerald-600 bg-clip-text text-transparent">EN</span>
                     </label>
                     <span class="text-[10px] uppercase font-bold opacity-50" data-translate="mobile-theme">Langue</span>
                 </div>
@@ -147,7 +167,7 @@
                     <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                         <a href="https://github.com/Ursula4002?tab=repositories" class="px-8 py-4 bg-emerald-500 text-white font-semibold 
                      rounded-xl hover:bg-emerald-600 transition-all duration-300 shadow-lg 
-                     w-full text-center" target="_blank" rel="noopener noreferrer"  data-translate="hero-btn-projects"  >
+                     w-full text-center" target="_blank" rel="noopener noreferrer" data-translate="hero-btn-projects">
                             Voir mes projets
                         </a>
                     </div>
@@ -175,7 +195,8 @@
                             </a>
                             <a href="#contact" class="px-8 py-4 border-2 border-slate-300 dark:border-slate-600 
                        text-base-content font-semibold rounded-xl 
-                       hover:bg-base-200 dark:hover:bg-base-300 transition-all duration-300" data-translate="hero-btn-contact">
+                       hover:bg-base-200 dark:hover:bg-base-300 transition-all duration-300"
+                                data-translate="hero-btn-contact">
                                 Me contacter
                             </a>
                         </div>
@@ -425,8 +446,8 @@
                         </p>
                         <div class="card-actions justify-start gap-4">
                             <a href="https://ursula4002.github.io/Coffe-shop/#contacts"
-                                class="btn btn-primary btn-sm md:btn-md px-6 shadow-lg shadow-primary/20" target="_blank"
-                                rel="noopener noreferrer">Live
+                                class="btn btn-primary btn-sm md:btn-md px-6 shadow-lg shadow-primary/20"
+                                target="_blank" rel="noopener noreferrer">Live
                             </a>
                             <a href="https://github.com/Ursula4002/Coffe-shop"
                                 class="btn btn-outline btn-sm md:btn-md hover:bg-base-content" target="_blank"
