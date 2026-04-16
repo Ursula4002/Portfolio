@@ -84,7 +84,7 @@ const translations = {
         'wattpad-desc': 'Réplication pixel-perfect de la landing page Wattpad pour perfectionner l\'intégration responsive.',
         'hangman-desc': 'Jeu interactif avec gestion des scores et dictionnaire de mots dynamique.',
         'kintacos-desc': 'Application de commande en ligne pour un fast-food local.',
-        'see-more': 'Voir plus...',
+        'see-more': 'Visiter mon repo',
 
         // Contact & Footer
         'phone': 'Téléphone',
@@ -131,7 +131,7 @@ const translations = {
         'wattpad-desc': 'Pixel-perfect replication of the Wattpad landing page to perfect responsive integration.',
         'hangman-desc': 'Interactive game with score management and dynamic word dictionary.',
         'kintacos-desc': 'Online ordering application for a local fast-food restaurant.',
-        'see-more': 'See more...',
+        'see-more': 'Visit my repository',
 
         // Contact & Footer
         'phone': 'Phone',
