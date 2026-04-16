@@ -86,6 +86,19 @@ const translations = {
         'kintacos-desc': 'Application de commande en ligne pour un fast-food local.',
         'see-more': 'Visiter mon repo',
 
+        // Form
+        'contact-form-title': 'Envoyez-moi un message',
+        'form-name': 'Nom complet',
+        'form-email': 'Email',
+        'form-subject-label': 'Pourquoi me contactez-vous ?',
+        'form-subject-select': 'Choisissez une option',
+        'form-opt-job': 'Offre d\'emploi (CDI/CDD)',
+        'form-opt-free': 'Mission Freelance',
+        'form-opt-collab': 'Collaboration Projet',
+        'form-opt-other': 'Autre chose',
+        'form-message': 'Message',
+        'form-btn-send': 'Envoyer le message',
+
         // Contact & Footer
         'phone': 'Téléphone',
         'email': 'Email',
@@ -132,6 +145,19 @@ const translations = {
         'hangman-desc': 'Interactive game with score management and dynamic word dictionary.',
         'kintacos-desc': 'Online ordering application for a local fast-food restaurant.',
         'see-more': 'Visit my repository',
+
+                // Form
+        'contact-form-title': 'Send me a message',
+        'form-name': 'Full Name',
+        'form-email': 'Email',
+        'form-subject-label': 'Why are you contacting me?',
+        'form-subject-select': 'Choose an option',
+        'form-opt-job': 'Job Offer (Full-time)',
+        'form-opt-free': 'Freelance Mission',
+        'form-opt-collab': 'Project Collaboration',
+        'form-opt-other': 'Other',
+        'form-message': 'Message',
+        'form-btn-send': 'Send message',
 
         // Contact & Footer
         'phone': 'Phone',
