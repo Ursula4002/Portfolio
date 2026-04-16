@@ -614,6 +614,90 @@
             </div>
         </section>
 
+        <!-- Section Contact Form -->
+        <section id="contact-me" class="py-16 md:py-24 px-6 md:px-12 bg-base-200/50">
+            <div
+                class="max-w-2xl mx-auto bg-base-100 p-8 md:p-12 rounded-3xl shadow-xl border border-base-content/5 relative overflow-hidden">
+
+                <!-- Décoration subtile en arrière-plan -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-base-content"
+                    data-translate="contact-form-title">
+                    Envoyez-moi un message
+                </h2>
+
+                <form action="https://formspree.io/f/xlgaepeo" method="POST" class="space-y-6 relative z-10">
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Nom -->
+                        <div class="form-control w-full">
+                            <label class="label">
+                                <span class="label-text font-semibold text-base-content/80"
+                                    data-translate="form-name">Nom
+                                    complet</span>
+                            </label>
+                            <input type="text" name="name" placeholder="John Doe"
+                                class="input input-bordered w-full bg-base-200 border-none focus:ring-2 focus:ring-emerald-500 transition-all"
+                                required />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-control w-full">
+                            <label class="label">
+                                <span class="label-text font-semibold text-base-content/80"
+                                    data-translate="form-email">Email</span>
+                            </label>
+                            <input type="email" name="email" placeholder="votre@email.com"
+                                class="input input-bordered w-full bg-base-200 border-none focus:ring-2 focus:ring-emerald-500 transition-all"
+                                required />
+                        </div>
+                    </div>
+
+                    <!-- Sujet -->
+                    <div class="form-control w-full">
+                        <label class="label">
+                            <span class="label-text font-semibold text-base-content/80"
+                                data-translate="form-subject-label">Pourquoi me contactez-vous ?</span>
+                        </label>
+                        <select name="subject"
+                            class="select select-bordered w-full bg-base-200 border-none focus:ring-2 focus:ring-emerald-500 transition-all">
+                            <option disabled selected data-translate="form-subject-select">Choisissez une option
+                            </option>
+                            <option value="CDI/CDD" data-translate="form-opt-job">Offre d'emploi (CDI/CDD)</option>
+                            <option value="Freelance" data-translate="form-opt-free">Mission Freelance</option>
+                            <option value="Collaboration" data-translate="form-opt-collab">Collaboration Projet</option>
+                            <option value="Autre" data-translate="form-opt-other">Autre chose</option>
+                        </select>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-control w-full">
+                        <label class="label">
+                            <span class="label-text font-semibold text-base-content/80"
+                                data-translate="form-message">Message</span>
+                        </label>
+                        <textarea name="message" rows="5" placeholder="Votre message ici..."
+                            class="textarea textarea-bordered w-full bg-base-200 border-none focus:ring-2 focus:ring-emerald-500 transition-all text-base"
+                            required></textarea>
+                    </div>
+
+                    <!-- Champ anti-spam caché -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <!-- Bouton Envoyer -->
+                    <div class="pt-4">
+                        <button type="submit"
+                            class="btn bg-emerald-500 hover:bg-emerald-600 border-none text-white w-full h-14 rounded-xl text-lg font-bold shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:-translate-y-1">
+                            <span data-translate="form-btn-send">Envoyer le message</span>
+                            <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <!-- Main ends here -->
