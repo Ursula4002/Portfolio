@@ -32,5 +32,3 @@ Comme le projet utilise des CDN pour Tailwind et DaisyUI, aucune installation de
 
 ## To do:
 
-* Fix Button color
-* Fix card section
