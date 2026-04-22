@@ -55,8 +55,12 @@ const translations = {
         'mobile-lang': 'Langue',
 
         // Hero
-        'hero-desc-mobile': 'Développeuse web Fullstack.<br>J\'incarne des idées en interfaces fluides et modernes.',
-        'hero-desc-desktop': 'Développeuse web frontend.<br>J\'incarne des idées en interfaces fluides et modernes.',
+        'hero-desc-mobile': 'Hello, moi c\'est Ursula!<br>\
+                            Je donne vie à vos idées à travers des interfaces élégantes, intuitives et utiles.<br>\
+Mon objectif ? Transformer la complexité en simplicité, en créant des expériences accessibles à tous, peu importe la langue ou le contexte.',
+        'hero-desc-desktop': 'Hello, moi c\'est Ursula!<br>\
+                            Je donne vie à vos idées à travers des interfaces élégantes, intuitives et utiles.<br>\
+Mon objectif ? Transformer la complexité en simplicité, en créant des expériences accessibles à tous, peu importe la langue ou le contexte.',
         'hero-btn-projects': 'Voir mes projets',
         'hero-btn-contact': 'Me contacter',
 
@@ -65,7 +69,8 @@ const translations = {
         'about-heading': 'Développeuse Fullstack passionnée par l\'expérience utilisateur.',
         'about-first-desc': 'Je conçois des sites et des applications comme des outils au service d\’un besoin concret. Chaque projet est pensé pour répondre à une problématique précise ou améliorer un processus existant.',
         'about-second-desc': 'L\’expérience utilisateur guide chacune de mes décisions. L\’objectif n\’est pas uniquement de créer des interfaces esthétiques, mais de rendre la technologie simple, fluide et accessible.',
-        'about-tech-stack': 'Compétences techniques',
+        // 'about-tech-stack': 'Compétences techniques',
+        'tech-stack': 'Mes Outils',
         'lang': 'Langues',
         'lang-fr': 'Français',
         'lang-fr-desc': 'Natif',
@@ -125,7 +130,8 @@ const translations = {
         'about-heading': 'Fullstack Developer passionate about user experience.',
         'about-first-desc': 'I design websites and applications as tools serving a concrete need. Each project is thought to solve a specific problem or improve an existing process.',
         'about-second-desc': 'User experience guides my every decision. The goal is not just to create aesthetic interfaces, but to make technology simple, fluid, and accessible.',
-        'about-tech-stack': 'Tech Stack',
+        // 'about-tech-stack': 'Tech Stack',
+        'tech-stack': 'Tech Stack',
         'lang': 'Languages',
         'lang-fr': 'French',
         'lang-fr-desc': 'Native',
@@ -146,7 +152,7 @@ const translations = {
         'kintacos-desc': 'Online ordering application for a local fast-food restaurant.',
         'see-more': 'Visit my repository',
 
-                // Form
+        // Form
         'contact-form-title': 'Send me a message',
         'form-name': 'Full Name',
         'form-email': 'Email',
