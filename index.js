@@ -120,8 +120,12 @@ Mon objectif ? Transformer la complexité en simplicité, en créant des expéri
         'mobile-lang': 'Language',
 
         // Hero
-        'hero-desc-mobile': 'Fullstack web developer.<br>I turn ideas into smooth, modern interfaces.',
-        'hero-desc-desktop': 'Frontend web developer.<br>I turn ideas into smooth, modern interfaces.',
+        'hero-desc-mobile': 'Hello, I’m Ursula.<br>\
+                             I bring your ideas to life through elegant, intuitive, and useful interfaces.<br>\
+                            My goal? To turn complexity into simplicity by creating experiences that are accessible to everyone, regardless of language or context.',
+        'hero-desc-desktop': 'Hello, I’m Ursula.<br>\
+                             I bring your ideas to life through elegant, intuitive, and useful interfaces.<br>\
+                            My goal? To turn complexity into simplicity by creating experiences that are accessible to everyone, regardless of language or context.',
         'hero-btn-projects': 'See my projects',
         'hero-btn-contact': 'Contact me',
 
