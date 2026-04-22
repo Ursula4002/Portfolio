@@ -65,6 +65,7 @@ Mon objectif ? Transformer la complexité en simplicité, en créant des expéri
         'hero-btn-contact': 'Me contacter',
 
         // About
+        'projects-subtitle' : 'Découvrez une sélection de mes réalisations les récentes.',
         'about-title': 'À propos de moi',
         'about-heading': 'Développeuse Fullstack passionnée par l\'expérience utilisateur.',
         'about-first-desc': 'Je suis développeuse fullstack et je crée des applications utiles, simples et efficaces.<br>\
@@ -131,6 +132,7 @@ Mon objectif ? Transformer la complexité en simplicité, en créant des expéri
         'hero-btn-contact': 'Contact me',
 
         // About
+        'projects-subtitle' : 'Check out a selection of my most recent projects.',
         'about-title': 'About Me',
         'about-heading': 'Fullstack Developer passionate about user experience.',
         'about-first-desc': 'I’m a full-stack developer, and I create useful, simple, and effective applications.<br>\
