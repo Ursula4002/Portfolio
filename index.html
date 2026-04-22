@@ -625,9 +625,9 @@
                 <div class="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
                 <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
 
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-base-content"
+                <h2 class="text-3xl md:text-xl font-bold text-center mb-10 text-base-content"
                     data-translate="contact-form-title">
-                    Envoyez-moi un message
+                    Une idée qui traîne ? Contactez-moi.
                 </h2>
 
                 <form action="https://formspree.io/f/xlgaepeo" method="POST" class="space-y-6 relative z-10">
@@ -638,9 +638,10 @@
                             <label class="label">
                                 <span class="label-text font-semibold text-base-content/80"
                                     data-translate="form-name">Nom
-                                    complet</span>
+                                    complet
+                                </span>
                             </label>
-                            <input type="text" name="name" placeholder="John Doe"
+                            <input type="text" name="name" placeholder="Jane Doe"
                                 class="input input-bordered w-full bg-base-200 border-none focus:ring-2 focus:ring-emerald-500 transition-all"
                                 required />
                         </div>
@@ -661,7 +662,7 @@
                     <div class="form-control w-full">
                         <label class="label">
                             <span class="label-text font-semibold text-base-content/80"
-                                data-translate="form-subject-label">Pourquoi me contactez-vous ?</span>
+                                data-translate="form-subject-label">Que souhaitez-vous ?</span>
                         </label>
                         <select name="subject"
                             class="select select-bordered w-full bg-base-200 border-none focus:ring-2 focus:ring-emerald-500 transition-all">
@@ -670,6 +671,8 @@
                             <option value="CDI/CDD" data-translate="form-opt-job">Offre d'emploi (CDI/CDD)</option>
                             <option value="Freelance" data-translate="form-opt-free">Mission Freelance</option>
                             <option value="Collaboration" data-translate="form-opt-collab">Collaboration Projet</option>
+                            <option value="Discussion" data-translate="form-opt-talk">Discuter d’une idée (ou simplement
+                                échanger)</option>
                             <option value="Autre" data-translate="form-opt-other">Autre chose</option>
                         </select>
                     </div>
@@ -699,7 +702,6 @@
                 </form>
             </div>
         </section>
-
     </main>
 
     <!-- Main ends here -->
