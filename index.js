@@ -67,8 +67,9 @@ Mon objectif ? Transformer la complexité en simplicité, en créant des expéri
         // About
         'about-title': 'À propos de moi',
         'about-heading': 'Développeuse Fullstack passionnée par l\'expérience utilisateur.',
-        'about-first-desc': 'Je conçois des sites et des applications comme des outils au service d\’un besoin concret. Chaque projet est pensé pour répondre à une problématique précise ou améliorer un processus existant.',
-        'about-second-desc': 'L\’expérience utilisateur guide chacune de mes décisions. L\’objectif n\’est pas uniquement de créer des interfaces esthétiques, mais de rendre la technologie simple, fluide et accessible.',
+        'about-first-desc': 'Je suis développeuse fullstack et je crée des applications utiles, simples et efficaces.<br>\
+        Je suis passionnée par tout ce qui touche à l\’expérience utilisateur et à la façon dont les gens interagissent avec la technologie.',
+        'about-second-desc': 'J\’aime concevoir des produits qui ont du sens, qui répondent à un besoin réel et qui rendent les choses plus faciles au quotidien.',
         // 'about-tech-stack': 'Compétences techniques',
         'tech-stack': 'Mes Outils',
         'lang': 'Langues',
@@ -132,8 +133,9 @@ Mon objectif ? Transformer la complexité en simplicité, en créant des expéri
         // About
         'about-title': 'About Me',
         'about-heading': 'Fullstack Developer passionate about user experience.',
-        'about-first-desc': 'I design websites and applications as tools serving a concrete need. Each project is thought to solve a specific problem or improve an existing process.',
-        'about-second-desc': 'User experience guides my every decision. The goal is not just to create aesthetic interfaces, but to make technology simple, fluid, and accessible.',
+        'about-first-desc': 'I’m a full-stack developer, and I create useful, simple, and effective applications.<br>\
+        I’m passionate about everything related to user experience and how people interact with technology..',
+        'about-second-desc': 'I love designing products that are meaningful, that meet a real need, and that make everyday life easier.',
         // 'about-tech-stack': 'Tech Stack',
         'tech-stack': 'Tech Stack',
         'lang': 'Languages',
