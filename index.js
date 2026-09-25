@@ -88,9 +88,9 @@ Mon objectif ? Transformer la complexité en simplicité, en créant des expéri
         'status-experimental': 'Expérimental',
         'status-ongoing': 'En cours',
         'coffee-desc': 'Plateforme e-commerce élégante pour une boutique de café spécialisée, avec gestion du panier.',
-        'wattpad-desc': 'Réplication pixel-perfect de la landing page Wattpad pour perfectionner l\'intégration responsive.',
+        'netflix-desc': 'Réplication pixel-perfect de la landing page Netflix pour perfectionner l\'intégration responsive.',
         'hangman-desc': 'Jeu interactif avec gestion des scores et dictionnaire de mots dynamique.',
-        'kintacos-desc': 'Reproduction fidèle de l\'interface et de l\'expérience utilisateur du célèbre site de restauration Kintacos.',
+        'chatapp-desc': 'Application de chat en temps réel avec interface moderne et fonctionnalités avancées.',
         'see-more': 'Visiter mon repo',
 
         // Form
@@ -155,9 +155,9 @@ Mon objectif ? Transformer la complexité en simplicité, en créant des expéri
         'status-experimental': 'Experimental',
         'status-ongoing': 'In Progress',
         'coffee-desc': 'Elegant e-commerce platform for a specialty coffee shop, with cart management.',
-        'wattpad-desc': 'Pixel-perfect replication of the Wattpad landing page to perfect responsive integration.',
+        'netflix-desc': 'Pixel-perfect replication of the Netflix landing page to refine the responsive design.',
         'hangman-desc': 'Interactive game with score management and dynamic word dictionary.',
-        'kintacos-desc': 'Faithful reproduction of the interface and user experience of the famous Kintacos restaurant website.',
+        'chatapp-desc': 'Real-time chat application with a modern interface and advanced features.',
         'see-more': 'Visit my repository',
 
         // Form
